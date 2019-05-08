@@ -28,11 +28,10 @@ let main = document.getElementById('primary');
 let iframeHeight = main.clientHeight;
 let embedHolder = document.getElementById('lms-embed-code')
 
-const embedOne ="<iframe frameborder='0' scrolling='no' width='100%' height='"+iframeHeight+"' ";
+const embedOne ="<iframe frameborder='0' scrolling='no' width='100%' height='"+iframeHeight+"px' ";
 const currentURL = window.location.href;
 const embedTwo ="src='"+currentURL+"?show=article'></iframe><script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'></script>";
 embedHolder.value = embedOne+embedTwo;
-console.log(height);
 
 
 //make stuff invisible
