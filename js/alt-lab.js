@@ -29,9 +29,11 @@ const show = urlParams.get('show');
 const headerNav = document.getElementById('wrapper-navbar');
 const rightSidebar = document.getElementById('right-sidebar');
 const footer = document.getElementById('wrapper-footer');
+const adminBar = document.getElementById('wpadminbar');
 
 if (show === 'article') {
-	headerNav.classList.add('hidden')
-	rightSidebar.classList.add('hidden')
-	footer.classList.add('hidden')
+	headerNav.classList.add('hidden');
+	rightSidebar.classList.add('hidden');
+	footer.classList.add('hidden');
+	adminBar.classList.add('hidden');	
 }
