@@ -19,6 +19,22 @@ function myFunction() {
 }
 
 
+//build embed code
+
+//<iframe frameborder='0' scrolling='no' width='100%' height='auto' src='<?php echo get_permalink();?>?show=article'></iframe>
+//<script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'></script>
+
+let main = document.getElementById('primary');
+let iframeHeight = main.clientHeight;
+let embedHolder = document.getElementById('lms-embed-code')
+
+const embedOne ="<iframe frameborder='0' scrolling='no' width='100%' height='"+iframeHeight+"' ";
+const currentURL = window.location.href;
+const embedTwo ="src='"+currentURL+"?show=article'></iframe><script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'></script>";
+embedHolder.value = embedOne+embedTwo;
+console.log(height);
+
+
 //make stuff invisible
 window.onload = function(){
 	const urlParams = new URLSearchParams(window.location.search);
@@ -48,19 +64,14 @@ window.onload = function(){
 
 function copyToClipboard(){
  let copyText = document.getElementById("lms-embed-code");
-
-  /* Select the text field */
   copyText.select();
-
-  /* Copy the text inside the text field */
   document.execCommand("copy");
 }
-
 document.getElementById("copy-embed-button").addEventListener("click", copyToClipboard);
 
 
-//preview embed option
-document.getElementById("preview-embed").addEventListener("click", previewChange);
+//preview embed 
+//document.getElementById("preview-embed").addEventListener("click", previewChange);
 
 function previewChange(){
 	const headerNav = document.getElementById('wrapper-navbar');
