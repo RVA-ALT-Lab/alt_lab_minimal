@@ -19,9 +19,6 @@ function myFunction() {
 }
 
 
-console.log(document.getElementsByTagName('article')[0].id)
-console.log(document.getElementsByTagName('article')[0].offsetHeight)
-
 //make stuff invisible
 window.onload = function(){
 	const urlParams = new URLSearchParams(window.location.search);
@@ -33,6 +30,7 @@ window.onload = function(){
 	const footer = document.getElementById('wrapper-footer');
 	const adminBar = document.getElementById('wpadminbar');
 	const privacy = document.getElementById('private');
+	const primary = document.getElementById('primary');
 
 	if (show === 'article') {
 		headerNav.classList.add('hidden');
@@ -40,6 +38,8 @@ window.onload = function(){
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
+		primary.removeAttribute("class");
+		primary.classList.add('col-md-12 content-area')
 	}
 }
 
@@ -57,3 +57,25 @@ function copyToClipboard(){
 }
 
 document.getElementById("copy-embed-button").addEventListener("click", copyToClipboard);
+
+
+//preview embed option
+document.getElementById("preview-embed").addEventListener("click", previewChange);
+
+function previewChange(){
+	const headerNav = document.getElementById('wrapper-navbar');
+	const rightSidebar = document.getElementById('right-sidebar');
+	const footer = document.getElementById('wrapper-footer');
+	const adminBar = document.getElementById('wpadminbar');
+	const privacy = document.getElementById('private');
+	const primary = document.getElementById('primary');
+	headerNav.classList.toggle('preview');
+    rightSidebar.classList.toggle('preview');
+	footer.classList.toggle('preview');
+	adminBar.classList.toggle('preview');
+	privacy.classList.toggle('preview');
+		
+
+}
+
+
