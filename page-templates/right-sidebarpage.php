@@ -39,10 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
-			 <div id="embed-me">
-			  	<h2>Embed Code</h2>
-			  	<input type="text" name="embed-code" value="<iframe src=''></iframe>">
-			  </div>	
+			 
 			<?php get_sidebar( 'right' ); ?>
 
 		</div><!-- .row -->

@@ -22,6 +22,7 @@ function myFunction() {
 console.log(document.getElementsByTagName('article')[0].id)
 console.log(document.getElementsByTagName('article')[0].offsetHeight)
 
+//make stuff invisible
 window.onload = function(){
 	const urlParams = new URLSearchParams(window.location.search);
 	const show = urlParams.get('show');
@@ -31,11 +32,28 @@ window.onload = function(){
 	const rightSidebar = document.getElementById('right-sidebar');
 	const footer = document.getElementById('wrapper-footer');
 	const adminBar = document.getElementById('wpadminbar');
+	const privacy = document.getElementById('private');
 
 	if (show === 'article') {
 		headerNav.classList.add('hidden');
 		rightSidebar.classList.add('hidden');
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
+		privacy.classList.add('hidden');
 	}
 }
+
+
+//copy embed code button
+
+function copyToClipboard(){
+ let copyText = document.getElementById("lms-embed-code");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+}
+
+document.getElementById("copy-embed-button").addEventListener("click", copyToClipboard);
