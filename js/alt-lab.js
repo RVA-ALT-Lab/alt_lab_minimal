@@ -22,18 +22,20 @@ function myFunction() {
 console.log(document.getElementsByTagName('article')[0].id)
 console.log(document.getElementsByTagName('article')[0].offsetHeight)
 
-const urlParams = new URLSearchParams(window.location.search);
-const show = urlParams.get('show');
+window.onload = function(){
+	const urlParams = new URLSearchParams(window.location.search);
+	const show = urlParams.get('show');
 
-//components to hide or show
-const headerNav = document.getElementById('wrapper-navbar');
-const rightSidebar = document.getElementById('right-sidebar');
-const footer = document.getElementById('wrapper-footer');
-const adminBar = document.getElementById('wpadminbar');
+	//components to hide or show
+	const headerNav = document.getElementById('wrapper-navbar');
+	const rightSidebar = document.getElementById('right-sidebar');
+	const footer = document.getElementById('wrapper-footer');
+	const adminBar = document.getElementById('wpadminbar');
 
-if (show === 'article') {
-	headerNav.classList.add('hidden');
-	rightSidebar.classList.add('hidden');
-	footer.classList.add('hidden');
-	adminBar.classList.add('hidden');	
+	if (show === 'article') {
+		headerNav.classList.add('hidden');
+		rightSidebar.classList.add('hidden');
+		footer.classList.add('hidden');
+		adminBar.classList.add('hidden');	
+	}
 }
