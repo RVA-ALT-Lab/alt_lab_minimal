@@ -53,8 +53,8 @@ window.onload = function(){
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
-		primary.removeAttribute("class");
-		primary.classList.add('col-md-12 content-area')
+		primary.className = '';
+		primary.classList.add('col-md-12', 'content-area')
 	}
 }
 
