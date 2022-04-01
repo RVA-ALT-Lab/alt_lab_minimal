@@ -24,14 +24,21 @@ function myFunction() {
 //<iframe frameborder='0' scrolling='no' width='100%' height='auto' src='<?php echo get_permalink();?>?show=article'></iframe>
 //<script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'></script>
 
-let main = document.getElementById('primary');
-let iframeHeight = main.clientHeight;
-let embedHolder = document.getElementById('lms-embed-code')
+// let main = document.getElementById('primary');
+// if(main.clientHeight){
+// 	let iframeHeight = main.clientHeight;
+// } else {
+// 	let iframeHeight = '500'
+// }
 
-const embedOne ="<iframe frameborder='0' scrolling='no' width='100%' style='min-height:"+iframeHeight+"px;' ";
+let embedHolder = document.getElementById('lms-embed-code');
+console.log(embedHolder)
 const currentURL = window.location.href;
+
+const embedOne =`<iframe frameborder='0' scrolling='no' width='100%' style='min-height:500px;' src='${currentURL}?show=article'></iframe>`;
+
 const embedTwo ="src='"+currentURL+"?show=article'></iframe><script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'></script>";
-embedHolder.value = embedOne+embedTwo;
+//embedHolder.value = embedOne;
 
 
 //make stuff invisible
@@ -41,16 +48,17 @@ window.onload = function(){
 
 	//components to hide or show
 	const headerNav = document.getElementById('wrapper-navbar');
-	const rightSidebar = document.getElementById('right-sidebar');
+	//const rightSidebar = document.getElementById('right-sidebar');
 	const footer = document.getElementById('wrapper-footer');
 	const adminBar = document.getElementById('wpadminbar');
 	const privacy = document.getElementById('private');
 	const primary = document.getElementById('primary');
-	const iframeEmbed = document.querySelector('.embed-tools')
-
+	const iframeEmbed = document.querySelector('.embed-tools');
+	const aTitle = document.querySelector('.navbar-brand');
+	console.log(show)
 	if (show === 'article') {
 		headerNav.classList.add('hidden');
-		rightSidebar.classList.add('hidden');
+		//rightSidebar.classList.add('hidden');
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
@@ -59,12 +67,14 @@ window.onload = function(){
 		primary.classList.add('col-md-12', 'content-area');
 	}
 	if (show === 'map'){
+		console.log('map')
 		headerNav.classList.add('hidden');
-		rightSidebar.classList.add('hidden');
+		//rightSidebar.classList.add('hidden');
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
-		privacy.classList.add('hidden');
+		//privacy.classList.add('hidden');
 		iframeEmbed.classList.add('hidden');
+		aTitle.classList.add('hidden');
 	}
 }
 
@@ -76,7 +86,7 @@ function copyToClipboard(){
   copyText.select();
   document.execCommand("copy");
 }
-document.getElementById("copy-embed-button").addEventListener("click", copyToClipboard);
+//document.getElementById("copy-embed-button").addEventListener("click", copyToClipboard);
 
 
 //preview embed 
