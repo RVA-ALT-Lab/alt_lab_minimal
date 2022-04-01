@@ -46,6 +46,7 @@ window.onload = function(){
 	const adminBar = document.getElementById('wpadminbar');
 	const privacy = document.getElementById('private');
 	const primary = document.getElementById('primary');
+	const iframeEmbed = document.querySelector('.embed-tools')
 
 	if (show === 'article') {
 		headerNav.classList.add('hidden');
@@ -53,6 +54,7 @@ window.onload = function(){
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
+		iframeEmbed.classList.add('hidden');
 		primary.className = '';
 		primary.classList.add('col-md-12', 'content-area');
 	}
@@ -62,7 +64,7 @@ window.onload = function(){
 		footer.classList.add('hidden');
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
-		
+		iframeEmbed.classList.add('hidden');
 	}
 }
 
