@@ -54,7 +54,15 @@ window.onload = function(){
 		adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
 		primary.className = '';
-		primary.classList.add('col-md-12', 'content-area')
+		primary.classList.add('col-md-12', 'content-area');
+	}
+	if (show === 'map'){
+		headerNav.classList.add('hidden');
+		rightSidebar.classList.add('hidden');
+		footer.classList.add('hidden');
+		adminBar.classList.add('hidden');	
+		privacy.classList.add('hidden');
+		
 	}
 }
 
