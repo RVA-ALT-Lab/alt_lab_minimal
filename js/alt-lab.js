@@ -60,7 +60,7 @@ window.onload = function(){
 		headerNav.classList.add('hidden');
 		//rightSidebar.classList.add('hidden');
 		footer.classList.add('hidden');
-		adminBar.classList.add('hidden');	
+		//adminBar.classList.add('hidden');	
 		privacy.classList.add('hidden');
 		iframeEmbed.classList.add('hidden');
 		primary.className = '';
@@ -71,7 +71,7 @@ window.onload = function(){
 		headerNav.classList.add('hidden');
 		//rightSidebar.classList.add('hidden');
 		footer.classList.add('hidden');
-		adminBar.classList.add('hidden');	
+		//adminBar.classList.add('hidden');	
 		//privacy.classList.add('hidden');
 		iframeEmbed.classList.add('hidden');
 		aTitle.classList.add('hidden');
