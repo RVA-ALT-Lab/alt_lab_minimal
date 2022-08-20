@@ -29,7 +29,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 	    <input id="lms-embed-code" value="<iframe frameborder='0' scrolling='no' width='100%' height='auto' src='<?php echo get_permalink();?>?show=article'></iframe>
 	</div>
 	<?php endif; ?>
-<?php dynamic_sidebar( 'right-sidebar' ); ?>
+<?php dynamic_sidebar( 'right-sidebar' );?>
 
 </div><!-- #secondary -->
 
@@ -39,3 +39,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   <script async src='https://rampages.us/extras/js/set-iframe-height-parent-min.js'>
   </script>
 -->
+
+
